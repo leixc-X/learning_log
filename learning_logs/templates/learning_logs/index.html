@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>You Blog</title>
+</head>
+<body>
+<!--    <p>Learning Log</p>-->
+
+    {% extends "learning_logs/base.html" %}
+    {% block header %}
+        <div class="jumbotron">
+            <h1>记录你的学习足迹</h1>
+        </div>
+        <div class="btn btn-primary btn-lg"><a href="{% url 'learning_logs:topics' %}" style="color: #ffffff">点击显示已创建主题</a></div>
+    {% endblock header %}
+
+
+
+    {% block content %}
+        <h2 style="margin-top: 200px">
+            <a href=" {% url 'users:register' %}">注册账户</a>让你拥有一个自己的学习笔记，并设置一个关于你学习的主题
+        </h2>
+        <h4>
+            无论何时当你想学一个新的主题，请设置一个入口总结你所学习的知识
+        </h4>
+<!--            <p>Learning Log帮助你记录学习的轨迹，包含任何你学习的话题</p>-->
+
+    {% endblock content %}
+
+</body>
+</html>
